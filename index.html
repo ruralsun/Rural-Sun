@@ -20,10 +20,10 @@
 </header>
 
 <section class="hero">
-  <div class="container">
+  <div class="hero-content">
     <h2>Reliable Building & Construction Services</h2>
-    <p>Quality workmanship you can trust.</p>
-    <a href="#contact" class="btn">Get a Quote</a>
+    <p>Quality workmanship. Affordable pricing. On-time delivery.</p>
+    <a href="#quote" class="btn">Get a Quote</a>
   </div>
 </section>
 
@@ -39,8 +39,64 @@
   </div>
 </section>
 
+<section id="quote" class="quote-section">
+  <h2>Request a Quote</h2>
+
+  <form onsubmit="sendQuote(event)">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <input type="email" id="email" placeholder="Email Address" />
+
+    <select id="service" required>
+      <option value="">Select Service</option>
+      <option>Painting</option>
+      <option>Brickwork</option>
+      <option>Roofing</option>
+      <option>Plumbing</option>
+      <option>Paving & Plastering</option>
+      <option>Waterproofing</option>
+    </select>
+
+    <textarea id="details" rows="4" placeholder="Describe your project" required></textarea>
+
+    <button type="submit" class="btn">Submit Quote Request</button>
+  </form>
+</section>
+
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
   <p>📞 072 085 0164 / 074 058 8458</p>
-  <p>✉️ norman
+  <p>✉️ normanktvh@gmail.com</p>
+</section>
 
+<footer>
+  <p>© 2025 Rural Sun Investments & Projects</p>
+</footer>
+
+<script>
+  function sendQuote(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const service = document.getElementById("service").value;
+    const details = document.getElementById("details").value;
+
+    const message = `QUOTE REQUEST
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Service: ${service}
+
+Project Details:
+${details}`;
+
+    window.location.href =
+      "mailto:normanktvh@gmail.com?subject=New Quote Request&body=" +
+      encodeURIComponent(message);
+  }
+</script>
+
+</body>
+</html>
