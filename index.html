@@ -1,36 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rural Sun Investments & Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Rural Sun</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Reliable Building & Construction Services</h2>
+    <p>Quality workmanship. Affordable pricing. On-time delivery.</p>
+    <a href="#quote" class="btn">Get a Quote</a>
+  </div>
+  <a class="whatsapp-btn" href="https://wa.me/27720850164" target="_blank">
+    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+</section>
+
 <section id="services" class="services">
   <h2>Our Services</h2>
   <div class="grid">
 
     <div class="service-item">
       <img src="https://images.pexels.com/photos/5298215/pexels-photo-5298215.jpeg?auto=compress&w=800" alt="Painting">
-      <div class="service-text"><i class="fa-solid fa-paint-roller"></i> Painting</div>
+      <div class="service-text"><i class="fas fa-paint-roller"></i> Painting</div>
     </div>
 
     <div class="service-item">
       <img src="https://pixabay.com/get/g26e58c5bee3f73f3d5f147df1c28693f6bbdbbfba3b9022059f3fde8d9b7b1c6addd9c883d6a8638c1ab3bc4fdd8fc22a_1280.jpg" alt="Brickwork">
-      <div class="service-text"><i class="fa-solid fa-building"></i> Brickwork</div>
+      <div class="service-text"><i class="fas fa-building"></i> Brickwork</div>
     </div>
 
     <div class="service-item">
       <img src="https://pixabay.com/get/g3ab8e942015b41d5dfa79ad47ce01a90c66f06a38dc9d28f38290bc3a559c0786806eb0b8fd0e1ca5e56d02358f90d53_1280.jpg" alt="Roofing">
-      <div class="service-text"><i class="fa-solid fa-house"></i> Roofing</div>
+      <div class="service-text"><i class="fas fa-house"></i> Roofing</div>
     </div>
 
     <div class="service-item">
       <img src="https://images.pexels.com/photos/8438647/pexels-photo-8438647.jpeg?auto=compress&w=800" alt="Plumbing">
-      <div class="service-text"><i class="fa-solid fa-bolt"></i> Plumbing</div>
+      <div class="service-text"><i class="fas fa-bolt"></i> Plumbing</div>
     </div>
 
     <div class="service-item">
       <img src="https://images.pexels.com/photos/4386462/pexels-photo-4386462.jpeg?auto=compress&w=800" alt="Paving & Plastering">
-      <div class="service-text"><i class="fa-solid fa-road"></i> Paving & Plastering</div>
+      <div class="service-text"><i class="fas fa-road"></i> Paving & Plastering</div>
     </div>
 
     <div class="service-item">
       <img src="https://images.pexels.com/photos/3749002/pexels-photo-3749002.jpeg?auto=compress&w=800" alt="Waterproofing">
-      <div class="service-text"><i class="fa-solid fa-shield-alt"></i> Waterproofing</div>
+      <div class="service-text"><i class="fas fa-shield-alt"></i> Waterproofing</div>
     </div>
 
   </div>
 </section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>📞 072 085 0164 / 074 058 8458</p>
+  <p>✉️ normanktvh@gmail.com</p>
+</section>
+
+<section id="quote" class="quote-form">
+  <h2>Get a Quote</h2>
+  <form onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="service" placeholder="Service Needed" required>
+    <textarea id="message" placeholder="Message / Details"></textarea>
+    <button type="submit">Send via WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Rural Sun Investments & Projects</p>
+</footer>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value;
+  const url = `https://wa.me/27720850164?text=Name: ${encodeURIComponent(name)}%0AService: ${encodeURIComponent(service)}%0AMessage: ${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
