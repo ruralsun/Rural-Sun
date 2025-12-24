@@ -27,7 +27,9 @@ header nav a {
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://images.pexels.com/photos/3802424/pexels-photo-3802424.jpeg") center/cover no-repeat;
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("https://images.pexels.com/photos/33656091/pexels-photo-33656091.jpeg?auto=compress&w=1200") center/cover no-repeat;
   height: 75vh;
   display: flex;
   justify-content: center;
@@ -36,12 +38,12 @@ header nav a {
   color: white;
 }
 
-.hero h2 {
+.hero-content h2 {
   font-size: 3rem;
   margin: 0;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.2rem;
 }
 
@@ -53,6 +55,22 @@ header nav a {
   color: white;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.whatsapp-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-btn i {
+  margin-right: 8px;
 }
 
 .services {
@@ -101,6 +119,32 @@ header nav a {
   background: #f2f2f2;
   padding: 50px 20px;
   text-align: center;
+}
+
+.quote-form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.quote-form button {
+  padding: 10px 20px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 footer {
