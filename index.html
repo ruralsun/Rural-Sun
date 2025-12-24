@@ -30,87 +30,25 @@
 
 <section class="hero">
   <div class="hero-content">
-    <h2>Reliable Building & Construction Services</h2>
-    <p>Quality workmanship. Affordable pricing. On-time delivery.</p>
-    <a href="#quote" class="btn">Get a Quote</a>
+    <h2 class="fade-in">Reliable Building & Construction Services</h2>
+    <p class="fade-in delay1">Quality workmanship. Affordable pricing. On-time delivery.</p>
+    <a href="#quote" class="btn fade-in delay2">Get a Quote</a>
   </div>
 </section>
 
 <section id="services" class="services">
   <h2>Our Services</h2>
   <div class="grid">
-    <div><i class="fa-solid fa-paint-roller"></i> Painting</div>
-    <div><i class="fa-solid fa-building"></i> Brickwork</div>
-    <div><i class="fa-solid fa-house"></i> Roofing</div>
-    <div><i class="fa-solid fa-bolt"></i> Plumbing</div>
-    <div><i class="fa-solid fa-road"></i> Paving & Plastering</div>
-    <div><i class="fa-solid fa-shield-alt"></i> Waterproofing</div>
-  </div>
-</section>
-
-<section id="quote" class="quote-section">
-  <h2>Request a Quote</h2>
-
-  <form onsubmit="sendQuoteWhatsApp(event)">
-    <input type="text" id="name" placeholder="Your Name" required />
-    <input type="tel" id="phone" placeholder="Phone Number" required />
-    <input type="email" id="email" placeholder="Email Address" />
-
-    <select id="service" required>
-      <option value="">Select Service</option>
-      <option>Painting</option>
-      <option>Brickwork</option>
-      <option>Roofing</option>
-      <option>Plumbing</option>
-      <option>Paving & Plastering</option>
-      <option>Waterproofing</option>
-    </select>
-
-    <textarea id="details" rows="4" placeholder="Describe your project" required></textarea>
-
-    <button type="submit" class="btn">Submit Quote Request</button>
-  </form>
-</section>
-
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>📞 072 085 0164 / 074 058 8458</p>
-  <p>✉️ normanktvh@gmail.com</p>
-</section>
-
-<footer>
-  <p>© 2025 Rural Sun Investments & Projects</p>
-</footer>
-
-<script>
-  function sendQuoteWhatsApp(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const email = document.getElementById("email").value;
-    const service = document.getElementById("service").value;
-    const details = document.getElementById("details").value;
-
-    const message = `Hello! I would like a quote from Rural Sun Investments & Projects:
-
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Service: ${service}
-Project Details: ${details}`;
-
-    // WhatsApp URL
-    const whatsappURL = "https://wa.me/27720850164?text=" + encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-  }
-</script>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/27720850164" class="whatsapp-btn" target="_blank">
-  <i class="fab fa-whatsapp"></i> Chat Now
-</a>
-
-</body>
-</html>
+    <div class="service-item">
+      <img src="images/painting.jpg" alt="Painting">
+      <div class="service-text"><i class="fa-solid fa-paint-roller"></i> Painting</div>
+    </div>
+    <div class="service-item">
+      <img src="images/brickwork.jpg" alt="Brickwork">
+      <div class="service-text"><i class="fa-solid fa-building"></i> Brickwork</div>
+    </div>
+    <div class="service-item">
+      <img src="images/roofing.jpg" alt="Roofing">
+      <div class="service-text"><i class="fa-solid fa-house"></i> Roofing</div>
+    </div>
+    <div class
