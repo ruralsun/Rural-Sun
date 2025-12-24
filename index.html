@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rural Sun Investments & Projects</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVbOZCxZHqH8x6sAtxv+xMr2l1qsrH4igHaXKwEcMi4VJrIw12FdyfOfld6PS5oYwXFnT+sp++52ytFES1x3WQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
 
@@ -13,7 +22,7 @@
     <h1>Rural Sun</h1>
     <nav>
       <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
+      <a href="#quote">Quote</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -30,19 +39,19 @@
 <section id="services" class="services">
   <h2>Our Services</h2>
   <div class="grid">
-    <div>Painting</div>
-    <div>Brickwork</div>
-    <div>Roofing</div>
-    <div>Plumbing</div>
-    <div>Paving & Plastering</div>
-    <div>Waterproofing</div>
+    <div><i class="fa-solid fa-paint-roller"></i> Painting</div>
+    <div><i class="fa-solid fa-building"></i> Brickwork</div>
+    <div><i class="fa-solid fa-house"></i> Roofing</div>
+    <div><i class="fa-solid fa-bolt"></i> Plumbing</div>
+    <div><i class="fa-solid fa-road"></i> Paving & Plastering</div>
+    <div><i class="fa-solid fa-shield-alt"></i> Waterproofing</div>
   </div>
 </section>
 
 <section id="quote" class="quote-section">
   <h2>Request a Quote</h2>
 
-  <form onsubmit="sendQuote(event)">
+  <form onsubmit="sendQuoteWhatsApp(event)">
     <input type="text" id="name" placeholder="Your Name" required />
     <input type="tel" id="phone" placeholder="Phone Number" required />
     <input type="email" id="email" placeholder="Email Address" />
@@ -74,7 +83,7 @@
 </footer>
 
 <script>
-  function sendQuote(e) {
+  function sendQuoteWhatsApp(e) {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -83,20 +92,25 @@
     const service = document.getElementById("service").value;
     const details = document.getElementById("details").value;
 
-    const message = `QUOTE REQUEST
+    const message = `Hello! I would like a quote from Rural Sun Investments & Projects:
+
 Name: ${name}
 Phone: ${phone}
 Email: ${email}
 Service: ${service}
+Project Details: ${details}`;
 
-Project Details:
-${details}`;
+    // WhatsApp URL
+    const whatsappURL = "https://wa.me/27720850164?text=" + encodeURIComponent(message);
 
-    window.location.href =
-      "mailto:normanktvh@gmail.com?subject=New Quote Request&body=" +
-      encodeURIComponent(message);
+    window.open(whatsappURL, "_blank");
   }
 </script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/27720850164" class="whatsapp-btn" target="_blank">
+  <i class="fab fa-whatsapp"></i> Chat Now
+</a>
 
 </body>
 </html>
